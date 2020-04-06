@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%;">
+
+<head>
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.0.0/weui.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{$who}的日程</title>
+    <meta name="description" content="{$who}日程">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="__STATIC__/assets/css/normalize.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/themify-icons.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/pe-icon-7-filled.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/flag-icon.min.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/lib/datatable/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/style.css">
+    <link rel="stylesheet" href="__STATIC__/assets/css/sweetalert.css">
+</head>
+<!--其他样式-->
+
+<!--其他样式-->
+
+<body>
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+
+                    <div class="card-body--">
+                        <div class="table-stats">
+                            <table id="bootstrap-data-table" class="table">
+                                <thead>
+                                <tr>
+                                    <th>星期</th>
+
+                                    <th>时间</th>
+                                    <th>地点</th>
+                                    <th>事项</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {volist name= 'info' id='list'}
+                                <tr>
+                                    <td>  <span class="product">{$list.week}</span> </td>
+                                    <td>  <span class="product">{$list.time}</span> </td>
+                                    <td>  <span class="product">{$list.place}</span> </td>
+                                    <td> <span class="product">{$list.item}</span> </td>
+
+                                </tr>
+
+                                {/volist}
+                                {volist name= 'info2' id='list2'}
+                                <tr>
+                                    <td>  <span class="product">{$list2.week}</span> </td>
+                                    <td>  <span class="product">{$list2.time}</span> </td>
+                                    <td>  <span class="product">{$list2.place}</span> </td>
+                                    <td> <span class="product">{$list2.item}</span> </td>
+
+                                </tr>
+                                {/volist}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .animated -->
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
